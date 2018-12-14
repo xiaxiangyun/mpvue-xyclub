@@ -1,79 +1,67 @@
 <template>
   <div class="container">
-    <button open-type="getUserInfo" @getuserinfo="getUserInfo">登录</button>
-    <i-card full title="卡片标题" extra="额外内容" thumb="http://pic28.photophoto.cn/20130818/0020033143720852_b.jpg">
-      <view slot="content">内容不错</view>
-      <view slot="footer">尾部内容</view>
-    </i-card>
-    <i-button type="primary" bind:click="handleClick">这是一个按钮</i-button>
+    <div class="page-box">
+      <homepage v-if="current==='homepage'"/>
+      <businesscard v-if="current==='businesscard'"/>
+      <emoji v-if="current==='emoji'"/>
+    </div>
+    <i-tab-bar :current="current" @change="handleChange" class="tab-bar">
+      <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="主页"></i-tab-bar-item>
+      <i-tab-bar-item key="businesscard" icon="businesscard" current-icon="businesscard_fill" title="名片"></i-tab-bar-item>
+      <i-tab-bar-item key="emoji" icon="emoji" current-icon="emoji_fill" title="其它"></i-tab-bar-item>
+    </i-tab-bar>
   </div>
 </template>
 
 <script>
+import homepage from '@/components/homepage'
+import businesscard from '@/components/businesscard'
+import emoji from '@/components/emoji'
+
 export default {
+  components: { homepage, businesscard, emoji },
+
   data () {
     return {
-      msg: 'Hello!!!'
+      current: 'homepage'
     }
   },
 
-  // created () {
-  //   this.login()
-  // },
   methods: {
-    // login () {
-    //   console.log('触发')
-    //   qcloud.setLoginUrl(config.loginUrl)
-    //   const session = qcloud.Session.get()
-    //   console.log(session)
-    //   if (session) {
-    //     // 第二次登录
-    //     // 或者本地已经有登录态
-    //     // 可使用本函数更新登录态
-    //     qcloud.loginWithCode({
-    //       success: res => {
-    //         this.setData({ userInfo: res, logged: true })
-    //         console.log(res)
-    //       },
-    //       fail: err => {
-    //         console.error('222', err)
-    //       }
-    //     })
-    //   } else {
-    //     // 首次登录
-    //     qcloud.login({
-    //       success: res => {
-    //         this.setData({ userInfo: res, logged: true })
-    //       },
-    //       fail: err => {
-    //         console.log(err)
-    //       }
-    //     })
-    //   }
-    // },
+    /**
+     * 菜单切换
+     */
+    handleChange (e) {
+      // 跳转页面
+      this.current = e.mp.detail.key
+      // 改变标题
+      const title = this.current === 'homepage' ? '主页' : (this.current === 'businesscard' ? '名片' : '其它')
+      wx.setNavigationBarTitle({ title })
+    },
+
     getUserInfo (e) {
-      console.log('111', e.mp.detail.userInfo)
+      console.log('获取信息', e.mp.detail.userInfo)
     }
   }
-
-  // onLoad () {
-  //   wx.setNavigationBarTitle({
-  //     title: '修改后的导航'
-  //   })
-  // },
-
-  // methods: {
-  //   clickHandle () {
-  //     this.msg = '123'
-  //   }
-  // }
 }
 </script>
 
 <style scoped>
-.message {
-  color: red;
-  padding: 10px;
-  text-align: center;
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+.tab-bar {
+  height: 50px;
+  width: 100%;
+}
+.page-box {
+  flex: 1;
+  width: 100%;
+  overflow-y: auto;
 }
 </style>
