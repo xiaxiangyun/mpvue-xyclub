@@ -2,7 +2,7 @@
   <div class="container">
     <div class="page-box">
       <homepage v-if="current==='homepage'"/>
-      <businesscard v-if="current==='businesscard'"/>
+      <businesscard v-if="current==='businesscard'" @currentChange='currentChange'/>
       <emoji v-if="current==='emoji'"/>
     </div>
     <i-tab-bar :current="current" @change="handleChange" class="tab-bar">
@@ -39,8 +39,11 @@ export default {
       wx.setNavigationBarTitle({ title })
     },
 
-    getUserInfo (e) {
-      console.log('获取信息', e.mp.detail.userInfo)
+    /**
+     * 页面切换
+     */
+    currentChange (page) {
+      this.current = page
     }
   }
 }
@@ -56,7 +59,6 @@ export default {
   box-sizing: border-box;
 }
 .tab-bar {
-  height: 50px;
   width: 100%;
 }
 .page-box {

@@ -2,8 +2,12 @@
   "navigationBarBackgroundColor": "#fff",
   "navigationBarTitleText": "主页",
   "navigationBarTextStyle": "black",
+  "component": true,
   "usingComponents": {
     "i-tab-bar": "../../../static/iview/tab-bar/index",
-    "i-tab-bar-item": "../../../static/iview/tab-bar-item/index"
+    "i-tab-bar-item": "../../../static/iview/tab-bar-item/index",
+    "i-spin": "../../../static/iview/spin/index",
+    "i-modal": "../../../static/iview/modal/index",
+    "i-message": "../../../static/iview/message/index"
   }
 }

@@ -42,13 +42,16 @@ Component({
         handleClickItem ({ currentTarget = {} }) {
             const dataset = currentTarget.dataset || {};
             const { index } = dataset;
-            this.triggerEvent('click', { index });
+            this.triggerEvent('btnClick', { index });
         },
         handleClickOk () {
             this.triggerEvent('ok');
         },
         handleClickCancel () {
             this.triggerEvent('cancel');
+        },
+        handleGetuserinfo ({ detail = {} } = {}) {
+            this.triggerEvent('getuserinfo', detail);
         }
     }
 });
