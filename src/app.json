@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/index/main"
+    "pages/applet/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "Xiangyun Xia",
     "navigationBarTextStyle": "black"
   }
 }

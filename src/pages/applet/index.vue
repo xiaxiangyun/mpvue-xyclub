@@ -2,28 +2,30 @@
   <div class="container">
     <div class="page-box">
       <homepage v-if="current==='homepage'"/>
-      <businesscard v-if="current==='businesscard'" @currentChange='currentChange'/>
-      <emoji v-if="current==='emoji'"/>
+      <businesscard v-if="current==='businesscard'"/>
+      <others v-if="current==='others'"/>
     </div>
     <i-tab-bar :current="current" @change="handleChange" class="tab-bar">
       <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="主页"></i-tab-bar-item>
       <i-tab-bar-item key="businesscard" icon="businesscard" current-icon="businesscard_fill" title="名片"></i-tab-bar-item>
-      <i-tab-bar-item key="emoji" icon="emoji" current-icon="emoji_fill" title="其它"></i-tab-bar-item>
+      <i-tab-bar-item key="others" icon="emoji" current-icon="emoji_fill" title="其它"></i-tab-bar-item>
     </i-tab-bar>
   </div>
 </template>
 
 <script>
-import homepage from '@/components/homepage'
-import businesscard from '@/components/businesscard'
-import emoji from '@/components/emoji'
+import homepage from '@/components/HomePage'
+import businesscard from '@/components/BusinessCard'
+import others from '@/components/Others'
+import globalStore from '@/stores/global'
 
 export default {
-  components: { homepage, businesscard, emoji },
+  components: { homepage, businesscard, others },
 
-  data () {
-    return {
-      current: 'homepage'
+  computed: {
+    // 当前页面
+    current () {
+      return globalStore.state.currentPage
     }
   },
 
@@ -33,17 +35,10 @@ export default {
      */
     handleChange (e) {
       // 跳转页面
-      this.current = e.mp.detail.key
+      globalStore.commit('currentChange', e.mp.detail.key)
       // 改变标题
       const title = this.current === 'homepage' ? '主页' : (this.current === 'businesscard' ? '名片' : '其它')
       wx.setNavigationBarTitle({ title })
-    },
-
-    /**
-     * 页面切换
-     */
-    currentChange (page) {
-      this.current = page
     }
   }
 }
