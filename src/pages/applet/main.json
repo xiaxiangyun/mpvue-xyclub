@@ -8,6 +8,12 @@
     "i-tab-bar-item": "../../../static/iview/tab-bar-item/index",
     "i-spin": "../../../static/iview/spin/index",
     "i-modal": "../../../static/iview/modal/index",
-    "i-message": "../../../static/iview/message/index"
+    "i-message": "../../../static/iview/message/index",
+    "i-tabs": "../../../static/iview/tabs/index",
+    "i-tab": "../../../static/iview/tab/index",
+    "i-collapse": "../../../static/iview/collapse/index",
+    "i-collapse-item": "../../../static/iview/collapse-item/index",
+    "i-card": "../../../static/iview/card/index",
+    "i-divider": "../../../static/iview/divider/index"
   }
 }

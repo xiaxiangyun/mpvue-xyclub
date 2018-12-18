@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <div>其它</div>
-    <logincheck  :tips="'登录后可体验更多功能'"/>
+  <div class="other">
+    <div class="other-container">
+      <img src="/static/img/coming.jpg" class="img">
+    </div>
+    <logincheck tips="登录后可体验更多功能"/>
   </div>
   
 </template>
@@ -22,6 +24,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.other, .other-container, .img {
+  height: 100%;
+  width: 100%;
+}
 </style>
