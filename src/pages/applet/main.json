@@ -4,6 +4,7 @@
   "navigationBarTextStyle": "black",
   "component": true,
   "usingComponents": {
+    "ec-canvas": "../../../static/echarts/ec-canvas",
     "i-tab-bar": "../../../static/iview/tab-bar/index",
     "i-tab-bar-item": "../../../static/iview/tab-bar-item/index",
     "i-spin": "../../../static/iview/spin/index",

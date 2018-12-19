@@ -1,13 +1,22 @@
 <template>
-  <div>主页</div>
+  <div class="homepage">
+    主页
+  </div>
 </template>
 
 <script>
 export default {
+  data () {
+    return {}
+  },
 
+  methods: {}
 }
 </script>
 
-<style>
-
+<style scoped>
+.homepage {
+  height: 100%;
+  width: 100%;
+}
 </style>

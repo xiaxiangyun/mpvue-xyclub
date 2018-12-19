@@ -5,7 +5,7 @@ const default_data = {
     image: '',
     duration: 2,
     mask: true,
-    type: 'default', // default || success || warning || error || loading
+    type: 'default' // default || success || warning || error || loading
 };
 
 let timmer = null;

@@ -5,7 +5,7 @@
         <i-tab v-for="tab in tabs" :key="tab.key" :title="tab.title"></i-tab>
       </i-tabs>
       <div class="tabs-container">
-        <introduction v-if="currentTab==='introduction'"/>
+        <introduction v-if="currentTab==='introduction'" :current="currentTab"/>
         <information v-if="currentTab==='information'"/>
         <experience v-if="currentTab==='experience'"/>
         <skill v-if="currentTab==='skill'"/>
