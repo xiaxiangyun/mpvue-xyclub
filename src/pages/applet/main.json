@@ -15,6 +15,7 @@
     "i-collapse": "../../../static/iview/collapse/index",
     "i-collapse-item": "../../../static/iview/collapse-item/index",
     "i-card": "../../../static/iview/card/index",
-    "i-divider": "../../../static/iview/divider/index"
+    "i-divider": "../../../static/iview/divider/index",
+    "i-notice-bar": "../../../static/iview/notice-bar/index"
   }
 }

@@ -57,6 +57,7 @@ export default {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 .tab-bar {
   width: 100%;
