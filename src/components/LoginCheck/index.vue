@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       // 自定义按钮
-      buttons: [ { name: '返回首页' }, { name: '微信登陆', color: '#19be6b', openType: 'getUserInfo' } ]
+      buttons: [ { name: '返回首页' }, { name: '微信登录', color: '#19be6b', openType: 'getUserInfo' } ]
     }
   },
 
@@ -41,7 +41,7 @@ export default {
       if (index === 0) globalStore.commit('currentChange', 'homepage')
     },
     /**
-     * 微信原生登陆事件
+     * 微信原生登录事件
      */
     getuserinfo (e) {
       const userInfo = e.mp.detail.userInfo

@@ -30,7 +30,7 @@ Component({
       if (!this.data.ec.lazyLoad) {
         this.init();
       }
-    }, 1500);
+    }, 500);
   },
 
   methods: {

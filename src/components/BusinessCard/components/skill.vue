@@ -1,13 +1,13 @@
 <template>
   <div class="skill">
-    <i-spin fix v-if="spinShow"></i-spin>
     <div class="skill-container" @click="turnover">
       <div class="canvas" :class="{ 'canvas-back': isBack }">
+        <i-spin fix v-if="spinShow"></i-spin>
         <i-notice-bar icon="systemprompt" closable class="tips">
           单击页面可查看详细信息
         </i-notice-bar>
-        <div class="title" v-show="!spinShow">前端技能掌握图谱</div>
-        <ec-canvas class="canvas" id="mychart-dom-bar" canvas-id="mychart-bar" :ec="ec"></ec-canvas>
+        <div class="title" v-if="!spinShow">前端技能掌握图谱</div>
+        <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" :ec="ec" :class="{ 'v-hidden': isHidden }"></ec-canvas>
       </div>
       <div class="explain" :class="{ 'explain-back': isBack }">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quisquam at porro dignissimos error iste vitae veniam, natus officiis eveniet doloribus ratione similique odit. Perspiciatis autem doloribus iusto dolorem labore.</p>
@@ -20,7 +20,6 @@
 
 <script>
 const options = {
-  backgroundColor: 'rgba(132, 175, 155, 0.4)',
   radar: {
     center: ['50%', '55%'],
     name: {
@@ -98,21 +97,29 @@ export default {
       // 遮罩是否显示
       spinShow: true,
       // 是否翻转
-      isBack: false
+      isBack: false,
+      // 隐藏canvas
+      isHidden: false
     }
   },
 
   methods: {
     turnover () {
       this.isBack = !this.isBack
-      console.log(this.isBack)
+      if (this.isBack) {
+        this.isHidden = this.isBack
+      } else {
+        setTimeout(() => {
+          this.isHidden = this.isBack
+        }, 650)
+      }
     }
   },
 
   onLoad () {
     setTimeout(() => {
       this.spinShow = false
-    }, 1500)
+    }, 2000)
   }
 }
 </script>
@@ -125,18 +132,20 @@ export default {
 }
 .skill-container {
   position: relative;
-  perspective: 1000px;
+  perspective: 600px;
 }
 .canvas, .explain {
   height: 100%;
   width: 100%;
   position: absolute;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
   transition: ease-in-out 600ms;
 }
 .canvas {
   overflow: hidden;
+  background: #cbe2d8;
 }
 .explain {
   transform: rotateY(-180deg);
@@ -144,7 +153,9 @@ export default {
 }
 .canvas-back {
   transform: rotateY(180deg);
-  opacity: 0;
+}
+.v-hidden {
+  display: none;
 }
 .explain-back {
   transform: rotateY(0deg);
@@ -153,12 +164,13 @@ export default {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 99;
 }
 .title {
   position: absolute;
   left: 50%;
   top: 10%;
   transform: translateX(-50%);
+  z-index: 88;
 }
 </style>

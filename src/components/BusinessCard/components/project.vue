@@ -11,7 +11,7 @@
             <span class="sub-title">项目简介</span>
             <span class="sub-content">{{item.intro}}</span>
           </div>
-          <div class="sub-item" v-show="item.address">
+          <div class="sub-item" v-if="item.address">
             <span class="sub-title">项目地址</span>
             <span class="sub-content">{{item.address}}</span>
           </div>
