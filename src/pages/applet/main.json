@@ -16,6 +16,12 @@
     "i-collapse-item": "../../../static/iview/collapse-item/index",
     "i-card": "../../../static/iview/card/index",
     "i-divider": "../../../static/iview/divider/index",
-    "i-notice-bar": "../../../static/iview/notice-bar/index"
+    "i-notice-bar": "../../../static/iview/notice-bar/index",
+    "i-rate": "../../../static/iview/rate/index",
+    "i-toast": "../../../static/iview/toast/index",
+    "i-button": "../../../static/iview/button/index",
+    "i-cell-group": "../../../static/iview/cell-group/index",
+    "i-cell": "../../../static/iview/cell/index",
+    "i-icon": "../../../static/iview/icon/index"
   }
 }
