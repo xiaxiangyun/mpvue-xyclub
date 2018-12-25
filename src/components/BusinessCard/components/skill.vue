@@ -111,7 +111,7 @@ export default {
       } else {
         setTimeout(() => {
           this.isHidden = this.isBack
-        }, 650)
+        }, 550)
       }
     }
   },
@@ -119,7 +119,7 @@ export default {
   onLoad () {
     setTimeout(() => {
       this.spinShow = false
-    }, 2000)
+    }, 1000)
   }
 }
 </script>
@@ -141,7 +141,7 @@ export default {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   transform-style: preserve-3d;
-  transition: ease-in-out 600ms;
+  transition: ease-in-out 500ms;
 }
 .canvas {
   overflow: hidden;

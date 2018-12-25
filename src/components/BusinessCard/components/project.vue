@@ -40,9 +40,33 @@ export default {
       projectArr: [
         {
           name: 'item1',
-          title: '项目1',
-          time: '2019.10.10 - 2019.10.10',
-          address: 'www.xiaxiangyun.com',
+          title: '基础信息平台',
+          time: '2018.12.10 - 至今',
+          address: '',
+          intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipisci nisi ex quae. Reprehenderit, inventore voluptate necessitatibus maxime atque aliquam fugiat dolore enim numquam eaque ratione. Perspiciatis, temporibus cumque?',
+          contribution: ['Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipi', 'etur adipisicing elit. Perspiciatis similique adipisci nisi e', '345']
+        },
+        {
+          name: 'item2',
+          title: '限时练V2.2',
+          time: '2018.09.17 - 2018.09.29',
+          address: 'http://www.xuexin.org.cn/smartCampus/training',
+          intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipisci nisi ex quae. Reprehenderit, inventore voluptate necessitatibus maxime atque aliquam fugiat dolore enim numquam eaque ratione. Perspiciatis, temporibus cumque?',
+          contribution: ['Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipi', 'etur adipisicing elit. Perspiciatis similique adipisci nisi e', '345']
+        },
+        {
+          name: 'item3',
+          title: '限时练V3.0',
+          time: '2018.06.25 - 2018.09.14',
+          address: 'http://www.xuexin.org.cn/smartCampus/training',
+          intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipisci nisi ex quae. Reprehenderit, inventore voluptate necessitatibus maxime atque aliquam fugiat dolore enim numquam eaque ratione. Perspiciatis, temporibus cumque?',
+          contribution: ['Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipi', 'etur adipisicing elit. Perspiciatis similique adipisci nisi e', '345']
+        },
+        {
+          name: 'item4',
+          title: '限时练V2.0',
+          time: '2018.05.02 - 2018.06.13',
+          address: 'http://www.xuexin.org.cn/smartCampus/training',
           intro: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipisci nisi ex quae. Reprehenderit, inventore voluptate necessitatibus maxime atque aliquam fugiat dolore enim numquam eaque ratione. Perspiciatis, temporibus cumque?',
           contribution: ['Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis similique adipi', 'etur adipisicing elit. Perspiciatis similique adipisci nisi e', '345']
         }
@@ -65,6 +89,7 @@ export default {
   border: 1px solid #000;
   border-top: none;
   align-items: center;
+  line-height: 1.5em;
 }
 .sub-item:first-child {
   border-top: 1px solid #000;
@@ -72,11 +97,14 @@ export default {
 .sub-title {
   color: black;
   padding: 2px 8rpx;
+  min-width: 60px;
+  text-align: center;
 }
 .sub-content {
   flex: 1;
   padding: 2px 8rpx;
   border-left: 1px solid #000;
+  word-break: break-all;
 }
 .contribution {
   display: flex;

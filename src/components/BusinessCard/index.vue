@@ -4,7 +4,8 @@
       <i-tabs :current="currentName" scroll @change="tabChange">
         <i-tab v-for="tab in tabs" :key="tab.key" :title="tab.title"></i-tab>
       </i-tabs>
-      <div class="tabs-container" @touchstart="touchstart" @touchend="touchend">
+      <!-- <div class="tabs-container" @touchstart="touchstart" @touchend="touchend"> -->
+      <div class="tabs-container">
         <introduction v-if="currentName==='introduction'" :current="currentName"/>
         <information v-if="currentName==='information'"/>
         <experience v-if="currentName==='experience'"/>
@@ -53,11 +54,11 @@ export default {
     // 当前页
     currentName () {
       return globalStore.state.currentTab.name
-    },
-    // 当前页索引
+    }
+    /* // 当前页索引
     currentIndex () {
       return globalStore.state.currentTab.index
-    }
+    } */
   },
 
   methods: {
@@ -75,22 +76,21 @@ export default {
     },
 
     /**
-     * 滑动开始
+     * 滑动开始 暂未使用
      */
     touchstart (e) {
-      console.log(e.mp.changedTouches, 'e.mp.changedTouches')
       this.startX = e.mp.changedTouches[0].clientX
     },
 
     /**
-     * 找tab页名字
+     * 找tab页名字 暂未使用
      */
     findName (index) {
       return this.tabs[index].key
     },
 
     /**
-     * 滑动结束
+     * 滑动结束 暂未使用
      */
     touchend (e) {
       const endX = e.mp.changedTouches[0].clientX
