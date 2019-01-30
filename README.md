@@ -1,21 +1,11 @@
 # mpvue-applet
 
-> A Mpvue project
+个人小程序，半学习半装逼用，希望今后能慢慢开发出更多的功能。
 
-## Build Setup
+#### V1.0（20190130）
 
-``` bash
-# install dependencies
-npm install
+- 使用mpvue搭建项目，并使用iview weapp组件库；
+- 开发首页欢迎动画；
+- 开发简历模块；
+- 未经严格测试，可能会有一些bug。
 
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
