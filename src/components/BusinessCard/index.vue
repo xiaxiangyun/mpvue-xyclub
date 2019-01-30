@@ -45,7 +45,7 @@ export default {
         { key: 'hobbies', title: '兴趣爱好' },
         { key: 'evaluation', title: '评价一下' }
       ],
-      // 滑动开始的坐标
+      // 滑动开始的坐标 暂未使用
       startX: void 0
     }
   },
