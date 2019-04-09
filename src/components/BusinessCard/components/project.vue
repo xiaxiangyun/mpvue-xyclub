@@ -1,7 +1,13 @@
 <template>
   <div class="project">
     <i-collapse :name="name">
-      <i-collapse-item v-for="item in projectArr" :key="item.name" :name="item.name" :title="item.title" i-class-title="item-title">
+      <i-collapse-item
+        v-for="item in projectArr"
+        i-class-title="item-title"
+        :key="item.name"
+        :name="item.name"
+        :title="item.title"
+      >
         <div slot="content" class="item-content">
           <div class="sub-item">
             <span class="sub-title">开发周期</span>
@@ -118,7 +124,7 @@ export default {
 
 <style scoped>
 .project >>> .item-title {
-  font: 700 16px 'Microsoft Yahei';
+  font: 700 16px "Microsoft Yahei";
 }
 .item-content {
   font-size: 14px;

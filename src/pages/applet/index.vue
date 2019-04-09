@@ -7,7 +7,12 @@
     </div>
     <i-tab-bar :current="current" @change="handleChange" class="tab-bar">
       <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="主页"></i-tab-bar-item>
-      <i-tab-bar-item key="businesscard" icon="businesscard" current-icon="businesscard_fill" title="简历"></i-tab-bar-item>
+      <i-tab-bar-item
+        key="businesscard"
+        icon="businesscard"
+        current-icon="businesscard_fill"
+        title="简历"
+      ></i-tab-bar-item>
       <i-tab-bar-item key="others" icon="emoji" current-icon="emoji_fill" title="其它"></i-tab-bar-item>
     </i-tab-bar>
   </div>
@@ -57,7 +62,8 @@ export default {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
-  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
 }
 .tab-bar {
   width: 100%;
@@ -65,6 +71,7 @@ export default {
 .page-box {
   flex: 1;
   width: 100%;
+  overflow-x: hidden;
   overflow-y: auto;
 }
 </style>

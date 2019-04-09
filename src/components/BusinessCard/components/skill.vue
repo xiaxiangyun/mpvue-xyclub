@@ -10,7 +10,7 @@
 <script>
 const options = {
   // backgroundColor: 'rgba(20, 24, 69, 0.5)',
-  backgroundColor: 'rgba(0, 255, 127, 0.4)',
+  backgroundColor: 'rgba(238, 238, 238, 0.4)',
   title: {
     text: '前端技能图谱',
     textAlign: 'center',
@@ -113,7 +113,8 @@ export default {
 </script>
 
 <style scoped>
-.skill, .skll-container {
+.skill,
+.skll-container {
   height: 100%;
   width: 100%;
   box-sizing: border-box;

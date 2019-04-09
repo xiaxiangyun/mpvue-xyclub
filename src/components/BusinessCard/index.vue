@@ -1,20 +1,21 @@
 <template>
   <div class="card-box">
     <div class="tabs-box">
-      <i-tabs :current="currentName" scroll @change="tabChange">
+      <i-tabs scroll :current="currentName" @change="tabChange">
         <i-tab v-for="tab in tabs" :key="tab.key" :title="tab.title"></i-tab>
       </i-tabs>
       <!-- <div class="tabs-container" @touchstart="touchstart" @touchend="touchend"> -->
       <div class="tabs-container">
-        <introduction v-if="currentName==='introduction'" :current="currentName"/>
-        <information v-if="currentName==='information'"/>
-        <experience v-if="currentName==='experience'"/>
-        <skill v-if="currentName==='skill'"/>
-        <project v-if="currentName==='project'"/>
-        <hobbies v-if="currentName==='hobbies'"/>
-        <evaluation v-if="currentName==='evaluation'"/>
+        <introduction v-if="currentName === 'introduction'" :current="currentName"/>
+        <information v-if="currentName === 'information'"/>
+        <experience v-if="currentName === 'experience'"/>
+        <skill v-if="currentName === 'skill'"/>
+        <project v-if="currentName === 'project'"/>
+        <hobbies v-if="currentName === 'hobbies'"/>
+        <evaluation v-if="currentName === 'evaluation'"/>
       </div>
     </div>
+
     <logincheck tips="登录后可查看"/>
   </div>
 </template>
@@ -45,7 +46,7 @@ export default {
         { key: 'hobbies', title: '兴趣爱好' },
         { key: 'evaluation', title: '评价一下' }
       ],
-      // 滑动开始的坐标 暂未使用
+      // 滑动开始的坐标(暂未使用)
       startX: void 0
     }
   },
@@ -76,21 +77,21 @@ export default {
     },
 
     /**
-     * 滑动开始 暂未使用
+     * 滑动开始(暂未使用)
      */
     touchstart (e) {
       this.startX = e.mp.changedTouches[0].clientX
     },
 
     /**
-     * 找tab页名字 暂未使用
+     * 找tab页名字(暂未使用)
      */
     findName (index) {
       return this.tabs[index].key
     },
 
     /**
-     * 滑动结束 暂未使用
+     * 滑动结束(暂未使用)
      */
     touchend (e) {
       const endX = e.mp.changedTouches[0].clientX
@@ -118,6 +119,7 @@ export default {
 .card-box {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 .tabs-box {
   height: 100%;

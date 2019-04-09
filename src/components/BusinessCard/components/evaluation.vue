@@ -2,12 +2,16 @@
   <div class="evaluation">
     <div class="star-box">
       <div>星级评价：</div>
-      <i-rate @change="onChange" :value="starNum" size="32">
-        {{starNum}}星
-      </i-rate>
+      <i-rate @change="onChange" :value="starNum" size="32">{{starNum}}星</i-rate>
     </div>
     <div>
-      <textarea class="my-textarea" v-model="textareaVal" cols="30" rows="10" placeholder="请告诉我你的感受😄"></textarea>
+      <textarea
+        class="my-textarea"
+        v-model="textareaVal"
+        cols="30"
+        rows="10"
+        placeholder="请告诉我你的感受😄"
+      />
       <i-button @click="handleClick" type="info">提交</i-button>
     </div>
     <i-toast id="toast"/>

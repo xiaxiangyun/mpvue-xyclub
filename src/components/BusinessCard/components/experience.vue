@@ -45,7 +45,7 @@ export default {
 
 <style scoped>
 .experience >>> .item-title {
-  font: 700 16px 'Microsoft Yahei';
+  font: 700 16px "Microsoft Yahei";
 }
 .item-content {
   font-size: 14px;

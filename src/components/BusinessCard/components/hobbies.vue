@@ -11,7 +11,8 @@ export default {
 </script>
 
 <style scoped>
-.hobbies, .image {
+.hobbies,
+.image {
   height: 100%;
   width: 100%;
 }

@@ -16,9 +16,10 @@ export default {
 page {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 img {
-  display:block;
+  display: block;
 }
 </style>

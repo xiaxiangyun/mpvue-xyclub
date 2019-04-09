@@ -1,10 +1,13 @@
 <template>
   <div>
     <!-- 此处修改了iview modal组件：1.修改click事件为btnClick 2.增加openType传参 3.增加传递getuserinfo方法 -->
-    <i-modal :visible="modalFlag" @btnClick="handleClick" :actions="buttons" @getuserinfo="getuserinfo" >
-      {{tips}}
-    </i-modal>
-    <i-message id="message" />
+    <i-modal
+      :visible="modalFlag"
+      :actions="buttons"
+      @btnClick="handleClick"
+      @getuserinfo="getuserinfo"
+    >{{tips}}</i-modal>
+    <i-message id="message"/>
   </div>
 </template>
 
@@ -21,7 +24,7 @@ export default {
   data () {
     return {
       // 自定义按钮
-      buttons: [ { name: '返回首页' }, { name: '微信登录', color: '#19be6b', openType: 'getUserInfo' } ]
+      buttons: [{ name: '返回首页' }, { name: '微信登录', color: '#19be6b', openType: 'getUserInfo' }]
     }
   },
 

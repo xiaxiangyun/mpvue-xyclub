@@ -6,7 +6,6 @@
     </div>
     <logincheck tips="登录后可体验更多功能"/>
   </div>
-  
 </template>
 
 <script>
@@ -26,9 +25,12 @@ export default {
 </script>
 
 <style scoped>
-.other, .other-container, .image {
+.other,
+.other-container,
+.image {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 .words {
   position: fixed;
