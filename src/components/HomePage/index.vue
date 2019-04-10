@@ -1,16 +1,18 @@
 <template>
   <div class="homepage">
-    <div class="word-container text">
-      <span
-        v-for="(letter, index) in letters"
-        class="letter"
-        :key="index"
-        :class="{ alive: letter.alive }"
-        @click="flyFn(letter.val)"
-      >
-        <div class="character">{{letter.val}}</div>
-        <span></span>
-      </span>
+    <div class="block-box">
+      <div class="word-container text">
+        <span
+          v-for="(letter, index) in letters"
+          class="letter"
+          :key="index"
+          :class="{ alive: letter.alive }"
+          @click="flyFn(letter.val)"
+        >
+          <div class="character">{{letter.val}}</div>
+          <span v-if="!letter.alive"></span>
+        </span>
+      </div>
     </div>
     <div class="footer">DESIGN BY XXY</div>
   </div>
@@ -46,17 +48,26 @@ export default {
 .homepage {
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
 }
-.word-container {
-  color: #fff;
+.block-box {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
+}
+.word-container {
+  height: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
 }
 .footer {

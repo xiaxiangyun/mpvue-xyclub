@@ -131,10 +131,12 @@ export default {
   color: #515a6e;
 }
 .sub-item {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
+  align-items: center;
   border: 1px solid #000;
   border-top: none;
-  align-items: center;
   line-height: 1.5em;
 }
 .sub-item:first-child {
@@ -147,15 +149,20 @@ export default {
   text-align: center;
 }
 .sub-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
   padding: 2px 8rpx;
   border-left: 1px solid #000;
   word-break: break-all;
 }
 .contribution {
+  display: -webkit-flex;
   display: flex;
 }
 .contribution-content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
   padding-left: 6rpx;
 }

@@ -124,7 +124,9 @@ export default {
 .tabs-box {
   height: 100%;
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
   box-sizing: border-box;
 }
@@ -132,6 +134,8 @@ export default {
   padding: 0 20rpx;
 }
 .tabs-container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
   width: 100%;
   overflow-y: auto;

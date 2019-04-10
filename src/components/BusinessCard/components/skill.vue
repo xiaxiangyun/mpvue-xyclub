@@ -9,8 +9,8 @@
 
 <script>
 const options = {
-  // backgroundColor: 'rgba(20, 24, 69, 0.5)',
-  backgroundColor: 'rgba(238, 238, 238, 0.4)',
+  // backgroundColor: 'rgba(238, 238, 238, 0.3)',
+  backgroundColor: '#fff',
   title: {
     text: '前端技能图谱',
     textAlign: 'center',

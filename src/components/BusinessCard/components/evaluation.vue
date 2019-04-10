@@ -65,7 +65,9 @@ export default {
   word-break: break-all;
 }
 .star-box {
+  display: -webkit-flex;
   display: flex;
+  -webkit-align-items: center;
   align-items: center;
   margin: 10px;
 }

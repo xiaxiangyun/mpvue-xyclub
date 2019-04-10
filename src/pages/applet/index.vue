@@ -58,8 +58,11 @@ export default {
 .container {
   height: 100%;
   width: 100%;
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
+  -webkit-align-items: center;
   align-items: center;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
@@ -69,9 +72,10 @@ export default {
   width: 100%;
 }
 .page-box {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
   flex: 1;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 </style>
